@@ -1,0 +1,43 @@
+<sw-table [headers]="tableHeaders">
+  <div *ngFor="let movie of movies">
+    <p>{{ movie.title }}</p>
+    <p>{{ movie.episode_id }}</p>
+    <p>{{ movie.director }}</p>
+    <p>{{ movie.release_date | date }}</p>
+    <button (click)="editMovieDataMenu(movie)" class="edit-button">✎</button>
+  </div>
+  <sw-edit-data-menu *ngIf="showEditMovieData">
+    <h1>{{ movieDataToEdit.title }}</h1>
+    <button [disabled]="!!movieCharacters.length" (click)="editMovieCharacters(movieDataToEdit.characters)">Characters</button>
+    <button [disabled]="!!moviePlanets.length" (click)="editMoviePlanets(movieDataToEdit.planets)">Planets</button>
+    <button [disabled]="!!movieStarships.length" (click)="editMovieStarships(movieDataToEdit.starships)">Starships</button>
+    <button [disabled]="!!movieVehicles.length" (click)="editMovieVehicles(movieDataToEdit.vehicles)">Vehicles</button>
+    <button [disabled]="!!movieSpecies.length" (click)="editMovieSpecies(movieDataToEdit.species)">Species</button>
+    <button (click)="handleShowMovieDataMenu()" class="close-button">X</button>
+  </sw-edit-data-menu>
+</sw-table>
+
+<span *ngIf="!!movieCharacters.length" >
+  <hr/>
+  <sw-characters [charactersByMovie]="movieCharacters" ></sw-characters>
+</span>
+
+<span *ngIf="!!moviePlanets.length" >
+  <hr/>
+  <sw-planets [planetsByMovie]="moviePlanets" ></sw-planets>
+</span>
+
+<span *ngIf="!!movieStarships.length" >
+  <hr/>
+  <sw-starships [starshipsByMovie]="movieStarships" ></sw-starships>
+</span>
+
+<span *ngIf="!!movieVehicles.length" >
+  <hr/>
+  <sw-vehicles [vehiclesByMovie]="movieVehicles" ></sw-vehicles>
+</span>
+
+<span *ngIf="!!movieSpecies.length" >
+  <hr/>
+  <sw-species [speciesByMovie]="movieSpecies" ></sw-species>
+</span>

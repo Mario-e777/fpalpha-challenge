@@ -1,0 +1,10 @@
+<aside class="side-menu-container">
+  <ul>
+    <li *ngFor="let menuOption of menuLinks" routerLinkActive="active-link">
+      <a [routerLink]="menuOption.link">
+        <span>{{ menuOption.icon }}</span>
+        <p>{{ menuOption.name }}</p>
+      </a>
+    </li>
+  </ul>
+</aside>

@@ -1,0 +1,17 @@
+<sw-table
+  [headers]="tableHeaders"
+  [hasNextPage]="hasNextPage"
+  [hasPrevPage]="hasPrevPage"
+  (dataHandler)="getSpeciesByPage($event)"
+>
+  <div *ngFor="let specie of species" >
+    <p>{{ specie.name }}</p>
+    <p>{{ specie.classification }}</p>
+    <p>{{ specie.average_lifespan }}</p>
+    <p>{{ specie.language }}</p>
+    <a class="edit-link" [routerLink]="['edit/' + speciesByMovieEditRoute + specie.url | cleanURL: 'species', specie]" >
+      <button class="edit-button" >✎</button>
+    </a>
+  </div>
+</sw-table>
+

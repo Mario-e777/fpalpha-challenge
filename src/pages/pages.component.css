@@ -1,0 +1,17 @@
+.page-menu-container {
+  display: flex;
+  height: calc(100% - var(--header-height));
+  width: 100%;
+}
+
+.page-data-container {
+  padding: 0 1rem 1rem 1rem;
+  width: 100%;
+  height: fit-content;
+}
+
+@media screen and (max-width: 640px) {
+  .page-menu-container {
+    flex-direction: column;
+  }
+}

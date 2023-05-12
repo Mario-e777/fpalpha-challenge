@@ -1,0 +1,17 @@
+<sw-table
+  [headers]="tableHeaders"
+  [hasNextPage]="hasNextPage"
+  [hasPrevPage]="hasPrevPage"
+  (dataHandler)="getVehiclesByPage($event)"
+>
+  <div *ngFor="let vehicle of vehicles" >
+    <p>{{ vehicle.name }}</p>
+    <p>{{ vehicle.model }}</p>
+    <p>{{ vehicle.vehicle_class }}</p>
+    <p>{{ vehicle.cost_in_credits | numberAbbrebiation }}</p>
+    <a class="edit-link" [routerLink]="['edit/' + vehiclesByMovieEditRoute + vehicle.url | cleanURL: 'vehicles', vehicle]" >
+      <button class="edit-button" >✎</button>
+    </a>
+  </div>
+</sw-table>
+

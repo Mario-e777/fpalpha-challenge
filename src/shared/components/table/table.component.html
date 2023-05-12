@@ -1,0 +1,16 @@
+<div class="table-container" >
+  <div>
+    <b class="table-header"  *ngFor="let header of headers">
+      {{ header }}
+    </b>
+  </div>
+  <ng-content />
+  <div class="loader" >
+    <p>Loading...</p>
+  </div>
+</div>
+<div *ngIf="hasNextPage || hasPrevPage" class="table-pagination" >
+  <button (click)="handlePrevPage()" [disabled]="!hasPrevPage" >Prev</button>
+  <p class="page-indicator" >Page {{ currentPage }}</p>
+  <button (click)="handleNextPage()" [disabled]="!hasNextPage" >Next</button>
+</div>

@@ -1,0 +1,44 @@
+<sw-edit-form>
+  <h1>Edit Planet</h1>
+  <form [formGroup]="formGroup" (ngSubmit)="saveData()">
+    <div class="inputs-container">
+      <label>
+        <p>Name</p>
+        <input type="text" formControlName="Name" />
+      </label>
+      <label>
+        <p>Rotation Period</p>
+        <input type="number" formControlName="RotationPeriod" />
+      </label>
+      <label>
+        <p>Orbital Period</p>
+        <input type="number" formControlName="OrbitalPeriod" />
+      </label>
+      <label>
+        <p>Diameter</p>
+        <input type="number" formControlName="Diameter" />
+      </label>
+      <label>
+        <p>Climate</p>
+        <input type="text" formControlName="Climate" />
+      </label>
+      <label>
+        <p>Gravity</p>
+        <input type="text" formControlName="Gravity" />
+      </label>
+      <label>
+        <p>Terrain</p>
+        <input type="text" formControlName="Terrain" />
+      </label>
+      <label>
+        <p>Surface Water</p>
+        <input type="number" formControlName="SurfaceWater" />
+      </label>
+      <label>
+        <p>Population</p>
+        <input type="text" formControlName="Population" />
+      </label>
+    </div>
+    <button [disabled]="formGroup.invalid" type="submit">Save</button>
+  </form>
+</sw-edit-form>

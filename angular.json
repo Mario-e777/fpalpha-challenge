@@ -21,11 +21,18 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
+              "src/assets/icons/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/shared/globalStyles.css",
+              "src/shared/components/table/table.component.css",
+              "src/shared/components/sideMenu/sideMenu.component.css",
+              "src/shared/components/header/header.component.css",
+              "src/shared/components/editForm/editForm.component.css",
+              "src/shared/components/editDataMenu/editDataMenu.component.css",
+              "src/shared/components/dialog/dialog.component.css",
+              "src/pages/pages.component.css"
             ],
             "scripts": []
           },
@@ -83,11 +90,18 @@
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
-              "src/favicon.ico",
+              "src/assets/icons/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/shared/globalStyles.css",
+              "src/shared/components/table/table.component.css",
+              "src/shared/components/sideMenu/sideMenu.component.css",
+              "src/shared/components/header/header.component.css",
+              "src/shared/components/editForm/editForm.component.css",
+              "src/shared/components/editDataMenu/editDataMenu.component.css",
+              "src/shared/components/dialog/dialog.component.css",
+              "src/pages/pages.component.css"
             ],
             "scripts": []
           }

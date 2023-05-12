@@ -1,0 +1,36 @@
+.edit-data-menu {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: var(--background-color-primary);
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  flex-direction: column;
+  row-gap: 1rem;
+  top: 0;
+
+  & button {
+    min-width: 8rem;
+    cursor: pointer;
+    padding: 0.6rem 1rem;
+    font-size: 0.777rem;
+    border-radius: 0.444rem;
+    border: none;
+  }
+
+  & .close-button {
+    background-color: transparent;
+    min-width: fit-content;
+    border: none;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.5rem 0.669rem;
+    border-radius: 0.444rem;
+    background-color: var(--hover-button-color-primary);
+    height: fit-content;
+    display: flex;
+    align-items: center;
+  }
+}

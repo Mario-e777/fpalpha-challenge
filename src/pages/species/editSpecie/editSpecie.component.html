@@ -1,0 +1,44 @@
+<sw-edit-form>
+  <h1>Edit Specie</h1>
+  <form [formGroup]="formGroup" (ngSubmit)="saveData()">
+    <div class="inputs-container">
+      <label>
+        <p>Name</p>
+        <input type="text" formControlName="Name" />
+      </label>
+      <label>
+        <p>Classification</p>
+        <input type="text" formControlName="Classification" />
+      </label>
+      <label>
+        <p>Designation</p>
+        <input type="text" formControlName="Designation" />
+      </label>
+      <label>
+        <p>Average Height</p>
+        <input type="number" formControlName="AverageHeight" />
+      </label>
+      <label>
+        <p>Skin Colors</p>
+        <input type="text" formControlName="SkinColors" />
+      </label>
+      <label>
+        <p>Hair Colors</p>
+        <input type="text" formControlName="HairColors" />
+      </label>
+      <label>
+        <p>Eye Colors</p>
+        <input type="text" formControlName="EyeColors" />
+      </label>
+      <label>
+        <p>Average Lifespan</p>
+        <input type="number" formControlName="AverageLifespan" />
+      </label>
+      <label>
+        <p>Language</p>
+        <input type="text" formControlName="Language" />
+      </label>
+    </div>
+    <button [disabled]="formGroup.invalid" type="submit">Save</button>
+  </form>
+</sw-edit-form>

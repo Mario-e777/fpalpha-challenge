@@ -1,0 +1,13 @@
+<sw-table [headers]="tableHeaders" [hasNextPage]="hasNextPage" [hasPrevPage]="hasPrevPage"
+  (dataHandler)="getStarshipsByPage($event)">
+  <div *ngFor="let starship of starships">
+    <p>{{ starship.name }}</p>
+    <p>{{ starship.model }}</p>
+    <p>{{ starship.starship_class }}</p>
+    <p>{{ starship.cost_in_credits | numberAbbrebiation }}</p>
+    <a class="edit-link"
+      [routerLink]="['edit/' + starshipsByMovieEditRoute + starship.url | cleanURL: 'starships', starship]">
+      <button class="edit-button">✎</button>
+    </a>
+  </div>
+</sw-table>

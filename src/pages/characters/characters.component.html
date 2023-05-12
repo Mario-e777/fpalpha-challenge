@@ -1,0 +1,16 @@
+<sw-table
+  [headers]="tableHeaders"
+  [hasNextPage]="hasNextPage"
+  [hasPrevPage]="hasPrevPage"
+  (dataHandler)="getCharactersByPage($event)"
+>
+  <div *ngFor="let character of characters" >
+    <p>{{ character.name }}</p>
+    <p>{{ character.gender }}</p>
+    <p>{{ character.birth_year }}</p>
+    <p>{{ character.height }}</p>
+    <a class="edit-link" [routerLink]="['edit/' + charactersByMovieEditRoute + character.url | cleanURL: 'people', character]" >
+      <button class="edit-button" >✎</button>
+    </a>
+  </div>
+</sw-table>

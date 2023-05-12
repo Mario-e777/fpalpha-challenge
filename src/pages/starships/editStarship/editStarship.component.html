@@ -1,0 +1,60 @@
+<sw-edit-form>
+  <h1>Edit Starship</h1>
+  <form [formGroup]="formGroup" (ngSubmit)="saveData()">
+    <div class="inputs-container" >
+      <label>
+        <p>MGLT</p>
+        <input type="number" formControlName="MGLT" />
+      </label>
+      <label>
+        <p>Cargo Capacity</p>
+        <input type="number" formControlName="CargoCapacity" />
+      </label>
+      <label>
+        <p>Consumables</p>
+        <input type="text" formControlName="Consumables" />
+      </label>
+      <label>
+        <p>Cost In Credits</p>
+        <input type="number" formControlName="CostInCredits" />
+      </label>
+      <label>
+        <p>Crew</p>
+        <input type="text" formControlName="Crew" />
+      </label>
+      <label>
+        <p>Hyperdrive Rating</p>
+        <input type="number" formControlName="HyperdriveRating" />
+      </label>
+      <label>
+        <p>Length</p>
+        <input type="number" formControlName="Length" />
+      </label>
+      <label>
+        <p>Manufacturer</p>
+        <input type="text" formControlName="Manufacturer" />
+      </label>
+      <label>
+        <p>Max Atmosphering Speed</p>
+        <input type="number" formControlName="MaxAtmospheringSpeed" />
+      </label>
+      <label>
+        <p>Model</p>
+        <input type="text" formControlName="Model" />
+      </label>
+      <label>
+        <p>Name</p>
+        <input type="text" formControlName="Name" />
+      </label>
+      <label>
+        <p>Passengers</p>
+        <input type="number" formControlName="Passengers" />
+      </label>
+      <label>
+        <p>Starship Class</p>
+        <input type="text" formControlName="StarshipClass" />
+      </label>
+    </div>
+    <button [disabled]="formGroup.invalid" type="submit">Save</button>
+  </form>
+</sw-edit-form>

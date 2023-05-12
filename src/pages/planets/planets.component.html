@@ -1,0 +1,16 @@
+<sw-table
+  [headers]="tableHeaders"
+  [hasNextPage]="hasNextPage"
+  [hasPrevPage]="hasPrevPage"
+  (dataHandler)="getPlanetsByPage($event)"
+>
+  <div *ngFor="let planet of planets">
+    <p>{{ planet.name }}</p>
+    <p>{{ planet.climate }}</p>
+    <p>{{ planet.terrain }}</p>
+    <p>{{ planet.population | numberAbbrebiation }}</p>
+    <a class="edit-link" [routerLink]="['edit/' + planetsByMovieEditRoute + planet.url | cleanURL: 'planets', planet]" >
+      <button class="edit-button" >✎</button>
+    </a>
+  </div>
+</sw-table>

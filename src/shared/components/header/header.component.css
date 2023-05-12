@@ -1,0 +1,9 @@
+.header-container {
+  height: var(--header-height);
+  padding: 1rem 1rem;
+}
+
+.logo-image {
+  height: 100%;
+  width: auto;
+}

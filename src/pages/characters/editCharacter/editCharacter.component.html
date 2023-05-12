@@ -1,0 +1,40 @@
+<sw-edit-form>
+  <h1>Edit character</h1>
+  <form [formGroup]="formGroup" (ngSubmit)="saveData()">
+  <div class="inputs-container">
+    <label>
+      <p>Name</p>
+      <input type="text" formControlName="Name"/>
+    </label>
+    <label>
+      <p>Height</p>
+      <input type="number" formControlName="Height"/>
+    </label>
+    <label>
+      <p>Mass</p>
+      <input type="number" formControlName="Mass"/>
+    </label>
+    <label>
+      <p>Hair Color</p>
+      <input type="text" formControlName="HairColor"/>
+    </label>
+    <label>
+      <p>Skin Color</p>
+      <input type="text" formControlName="SkinColor"/>
+    </label>
+    <label>
+      <p>Eye Color</p>
+      <input type="text" formControlName="EyeColor"/>
+    </label>
+    <label>
+      <p>Birth Year</p>
+      <input type="text" formControlName="BirthYear"/>
+    </label>
+    <label>
+      <p>Gender</p>
+      <input type="text" formControlName="Gender"/>
+    </label>
+  </div>
+  <button [disabled]="formGroup.invalid" type="submit">Save</button>
+</form>
+</sw-edit-form>
