@@ -1,27 +1,27 @@
 # FpalphaChallenge
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
+---
+# Star Wars Data Retrieval Application
+This application has been developed to obtain detailed data about Star Wars movies. It allows users to edit information related to characters, planets, ships, vehicles, and species.
 
-## Development server
+The application was inspired by the design attached in the email, aiming to provide an attractive visual experience consistent with the Star Wars theme.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Key Features
+- Character Editing: Users can add, modify, or delete information about Star Wars characters, including their name, description, skills, and relevant characteristics.
 
-## Code scaffolding
+- Planet Editing: Allows management of data about the planets featured in Star Wars movies. Users can update information such as name, description, climate, population, and more.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Ship Editing: Provides the ability to edit data for Star Wars spaceships, such as name, description, type, manufacturer, and other specifications.
 
-## Build
+- Vehicle Editing: Allows users to manage information about vehicles used in the Star Wars universe, such as models, manufacturers, crew, cargo capacity, etc.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Species Editing: Enables updating data related to species present in the Star Wars saga, including name, classification, language, homeworld, and other details.
 
-## Running unit tests
+## Additional Packages
+The application uses the following additional packages from Angular Material:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- @angular/material: It is used to make use of dialogs in the application, allowing a more user-friendly interaction when adding, editing, or deleting data.
 
-## Running end-to-end tests
+- js-abbreviation-number: This package is used to abbreviate large numbers and improve the presentation of numerical data within the application.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Enjoy exploring the fascinating Star Wars universe through this application! May the Force be with you!
